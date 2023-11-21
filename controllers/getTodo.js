@@ -24,11 +24,14 @@ exports.getTodo = async (req, res) => {
   }
 };
 
+// get single todo item from id
+
 exports.getTodoById = async (req, res) => {
   try {
+    // gettong id from url
     const id = req.params.id;
     // fetch single data based on id
-    const todo = await Todo.find({ _id: id });
+    const todo = await Todo.findById({ _id: id });
 
     if(!todo){
         res.status(404).json({

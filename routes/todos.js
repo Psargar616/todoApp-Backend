@@ -10,7 +10,7 @@ const {updateTodo} =  require("../controllers/updateTodo");
 const {deleteTodo} = require("../controllers/deleteTodo")
 
 //define API routes and map it to controller
-router.post("/createTodo", createTodo);
+router.post("/createToDo", createTodo);
 router.get("/getTodos", getTodo);
 router.get("/getTodos/:id", getTodoById);
 router.put("/updateToDo/:id" , updateTodo);
